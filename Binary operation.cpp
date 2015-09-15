@@ -17,12 +17,20 @@ int main()
     char c;
     int cmin=999999;
     int cnt;
+    int pos=1;
     for(int i=0;i<16;i++)
     {
         cin>>c;
         if(c=='b')
-            value+=po[i];
+        {
+            //1: Use the data
+            //2: Get the data when running
+            //value+=po[i];
+            value+=pos;
+        }
+        pos=pos<<1;
     }
+    cout<<value<<endl;
 
     for(int i=0;i<65535;i++)
     {
