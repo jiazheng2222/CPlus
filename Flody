@@ -1,1 +1,38 @@
 
+http://www.cnblogs.com/hxsyl/p/3270401.html
+
+案例中，想要经过A->D->C->B来找到最短路径。那么我们有两种方式来更新：
+1：
+D A C 来查询到A、C的最短路径
+C A B 来达到最终目的
+2:
+C B D 来查询到B、D的最短路径
+D A B 来达到目的
+
+由此看出，并不一定要先D再C；也可以先C再D。那么Flody前后两次来松弛D，C的最短路径
+
+for (int k=0; k<n; ++k) {
+
+  for (int i=0; i<n; ++i) {
+
+    for (int j=0; j<n; ++j) {
+
+            /*
+
+            实际中为防止溢出，往往需要选判断 dist[i][k]和dist[k][j
+
+            都不是Inf ，只要一个是Inf，那么就肯定不必更新。 
+
+            */
+
+      if (dist[i][k] + dist[k][j] < dist[i][j] ) {
+
+        dist[i][j] = dist[i][k] + dist[k][j];
+
+      }
+
+    }
+
+  }
+
+}
