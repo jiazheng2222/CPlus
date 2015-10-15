@@ -3,3 +3,4 @@ http://www.cnblogs.com/hxsyl/p/3270401.html
 http://baike.baidu.com/link?url=wNLIlDkpdVeJ_qUThRH5ShsFR-XdbTvt8YpHhB_jThGFx3Sx5Les_PYqBB8O68vxblq2P4wUF-E7QokQERX1cgqLBhXErU2laXZb28PfnnPpAKxoh8bHk-8PQ8Agtbc5DGJThs3LItVnKJUNbSyJiYkRS8D5kaH5rf8k_K332ea
 
 每次选择T 中的点来更新的时候，要选择V0 到该点距离最短的点。这样每次更新才会缩短路径！！！
+因为可以发掘经过该点的其他最短路径，进而发掘中途经过多点的最短距离
