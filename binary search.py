@@ -22,4 +22,7 @@ def search(array,value):
 # if the value doesn't exist in the array:
 # l r will be switched between each other.
 # The difference is the sequence:
-#
+# l: l = mid + 1 -> l = r. I find the value of mid (mid= l+r/2 = l = r) is greater than value, so r = mid - 1
+# Therefore, I get r l
+# For r, it's the same. The result will also be r l.
+# This is the reason why I use ' loc = r' and insert the value after r
